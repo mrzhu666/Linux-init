@@ -6,7 +6,7 @@ init()
 {
     echo "Anaconda初始化"
     echo "1.安装Anacodna"
-    echo "2.创建环境"
+    # echo "2.创建环境"
     read -r select
     case $select in
         1) 
@@ -25,7 +25,7 @@ init()
 
 install()
 {
-    wget https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh
+    proxychains wget https://repo.anaconda.com/archive/Anaconda3-2021.11-Linux-x86_64.sh
     bash Anaconda3-2021.11-Linux-x86_64.sh
 }
 
