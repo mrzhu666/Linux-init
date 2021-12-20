@@ -7,8 +7,8 @@ init()
     echo "Anaconda初始化"
     echo "1.安装Anacodna"
     echo "2.创建环境"
-    read -n -r select
-    case $VAR in
+    read -r select
+    case $select in
         1) 
         install
         ;;

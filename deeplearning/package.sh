@@ -4,7 +4,7 @@ init()
 {
     echo "Anaconda环境管理"
     echo "1.导出"
-    echo "2.导出"
+    echo "2.导入"
     read -r selecttion
     echo "输入环境名称："
     read -r env
