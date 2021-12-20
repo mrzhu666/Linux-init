@@ -1,5 +1,6 @@
+#!/bin/bash
 echo "Testing \"false\""
-if [ "false" ]              #  "false"是一个字符串.
+if  "false"               #  "false"是一个字符串.
 then
   echo "\"false\" is true." #+ 它被测试为真.
 else
