@@ -17,6 +17,5 @@ init(){
         *) echo default
         ;;
     esac
-    
 }
 init
