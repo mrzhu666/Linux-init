@@ -28,8 +28,9 @@ exportEnv(){
 
 
 importEnv(){
-    conda env create -f "./out/$env".yaml -n "$env"
-    conda activate "$env" & :: source activate "$env"
+    source activate
+    # conda env create -f "./out/$env".yaml -n "$env"
+    conda activate "$env"
     pip install -r "./out/$env".txt
 }
 

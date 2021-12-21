@@ -6,6 +6,7 @@ init(){
     echo "1.代理管理"
 	echo "2.深度学习环境管理"
 	echo "3.初始化系统"
+    echo "4.框架环境管理"
 	
     echo -n "请输入对应数字>"
     read -r option
@@ -13,9 +14,15 @@ init(){
         1) 
             bash ./proxy/init.sh
         ;;
-        2|3) 
+        2) 
 			bash ./deeplearning/init.sh
         ;;
+		3)
+			bash ./OS/init.sh
+		;;
+		4)
+			bash ./framework/init.sh
+		;;
         *) echo default
         ;;
     esac

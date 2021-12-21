@@ -1,22 +1,22 @@
 #!/bin/bash
 
+# 一些框架环境配置
+
 init(){
     echo "-------------------------------------------------------------"
-    echo "代理管理"
-    echo "1.代理测试google"
-    echo "2.正常网络测试baidu"
+    echo "框架环境"
+    echo "1.vue"
     echo -n "请输入对应数字>"
     read -r option
     case $option in
         1) 
-            bash ./proxy/proxy-testing.sh
+            bash ./framework/vue.sh
         ;;
         2)
-            bash ./proxy/network-testing.sh
+            # bash ./deeplearning/package.sh
         ;;
         *) echo default
         ;;
     esac
-    
 }
 init
