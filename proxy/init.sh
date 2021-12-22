@@ -9,10 +9,10 @@ init(){
     read -r option
     case $option in
         1) 
-            bash ./proxy/proxy-testing.sh
+            bash $Linuxinit/proxy/proxy-testing.sh
         ;;
         2)
-            bash ./proxy/network-testing.sh
+            bash $Linuxinit/proxy/network-testing.sh
         ;;
         *) echo default
         ;;

@@ -1,5 +1,7 @@
 #!/bin/bash
 
+
+
 init(){
 	echo "-------------------------------------------------------------"
 	
@@ -12,16 +14,16 @@ init(){
     read -r option
     case $option in
         1) 
-            bash ./proxy/init.sh
+            bash $Linuxinit/proxy/init.sh
         ;;
         2) 
-			bash ./deeplearning/init.sh
+			bash $Linuxinit/deeplearning/init.sh
         ;;
 		3)
-			bash ./OS/init.sh
+			bash $Linuxinit/OS/init.sh
 		;;
 		4)
-			bash ./framework/init.sh
+			bash $Linuxinit/framework/init.sh
 		;;
         *) echo default
         ;;

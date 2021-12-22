@@ -10,7 +10,7 @@ init(){
     read -r option
     case $option in
         1) 
-            bash ./framework/vue.sh
+            bash $Linuxinit/framework/vue.sh
         ;;
         2)
             # bash ./deeplearning/package.sh

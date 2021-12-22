@@ -9,10 +9,10 @@ init(){
     read -r option
     case $option in
         1) 
-            bash ./deeplearning/anaconda.sh
+            bash $Linuxinit/deeplearning/anaconda.sh
         ;;
         2)
-            bash ./deeplearning/package.sh
+            bash $Linuxinit/deeplearning/package.sh
         ;;
         *) echo default
         ;;

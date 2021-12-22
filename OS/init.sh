@@ -12,7 +12,7 @@ init(){
     read -r option
     case $option in
         1) 
-            bash ./OS/ubuntu-18.04.6-live-server-amd64.sh
+            bash $Linuxinit/OS/ubuntu-18.04.6-live-server-amd64.sh
         ;;
         2)
             # bash ./deeplearning/package.sh
