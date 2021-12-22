@@ -22,8 +22,8 @@ init()
 exportEnv(){
     source activate  # 激活基础环境，脚本文件是隔离运行的
     conda activate "$env"
-    conda env export > "./out/$env".yaml
-    pip freeze > "./out/$env".txt
+    conda env export > "$Linuxinit/out/$env".yaml
+    pip freeze > "$Linuxinit/out/$env".txt
 }
 
 
@@ -31,7 +31,7 @@ importEnv(){
     source activate
     # conda env create -f "./out/$env".yaml -n "$env"
     conda activate "$env"
-    pip install -r "./out/$env".txt
+    pip install -r "$Linuxinit/out/$env".txt
 }
 
 init
