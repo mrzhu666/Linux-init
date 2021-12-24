@@ -3,12 +3,16 @@
 
 
 init(){
+    # 系统发行版
+    release=$(cat /etc/issue.net)
 	echo "-------------------------------------------------------------"
-	
+	echo "系统发行版：$release"
+    echo 
     echo "1.代理管理"
 	echo "2.深度学习环境管理"
 	echo "3.初始化系统"
     echo "4.框架环境管理"
+    echo "5.常用软件管理"
 	
     echo -n "请输入对应数字>"
     read -r option
@@ -24,6 +28,9 @@ init(){
 		;;
 		4)
 			bash $Linuxinit/framework/init.sh
+		;;
+		5)
+			bash $Linuxinit/software/init.sh
 		;;
         *) echo default
         ;;

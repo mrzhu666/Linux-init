@@ -23,7 +23,7 @@ vue(){
 
 uninstall(){
     # npm node 卸载旧版
-
+    # 需要升级版本时直接卸了再重装
     # apt卸载
     sudo apt remove --purge npm
     sudo apt remove --purge nodejs
@@ -41,11 +41,16 @@ uninstall(){
 
 install(){
     # 新版本安装 https://github.com/nodesource/distributions/blob/master/README.md
+    cd "$HOME" || return
+
     # Node.js v14.x:
     # node -v 14.18.2
     # npm -v 6.14.15
-    cd "$HOME" || return
-    curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+    # curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+    # sudo apt-get install -y nodejs
+
+
+    curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
     sudo apt-get install -y nodejs
 }
 
