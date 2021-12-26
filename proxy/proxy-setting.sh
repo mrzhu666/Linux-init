@@ -4,11 +4,11 @@
 # 服务器代理127.0.0.1
 # 虚拟机代理为主机ip
 # 混合代理设为socks5
-server="192.168.1.133"
-# server="127.0.0.1"
+# server="192.168.101.53"
+server="127.0.0.1"
 port="7890"
 
-
+c
 # git代理
 git config --global http.proxy "socks5://$server:$port" && git config --global https.proxy "socks5://$server:$port"
 
