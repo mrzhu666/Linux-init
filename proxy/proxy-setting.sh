@@ -8,7 +8,7 @@
 server="127.0.0.1"
 port="7890"
 
-c
+
 # git代理
 git config --global http.proxy "socks5://$server:$port" && git config --global https.proxy "socks5://$server:$port"
 
@@ -22,3 +22,4 @@ echo "
 # npm代理
 npm config set proxy "http://$server:$port"
 npm config set https-proxy "http://$server:$port"
+
