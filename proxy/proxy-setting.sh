@@ -13,9 +13,11 @@ c
 git config --global http.proxy "socks5://$server:$port" && git config --global https.proxy "socks5://$server:$port"
 
 # proxychains
+echo "
 # sudo vim /etc/proxychains.conf
 # socks5 127.0.0.1 7890
 # find /usr/lib/ -name libproxychains.so.3 -print命令输出路径，再将/usr/bin/proxychains下的export LD_PRELOAD=libproxychains.so.3改为export LD_PRELOAD=刚刚获得的路径
+"
 
 # npm代理
 npm config set proxy "http://$server:$port"

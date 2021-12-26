@@ -24,6 +24,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh/powerlev
 # 原terminus改名为tabby
 
 # 配置 linuxinit
+# 变量都放这个文件不放bashrc
 # if [ -f ~/.profile ]; then
 #     . ~/.profile;
 # fi

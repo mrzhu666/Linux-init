@@ -5,6 +5,7 @@ init(){
     echo "代理管理"
     echo "1.代理测试google"
     echo "2.正常网络测试baidu"
+    echo "3.安装ShellClash"
     echo -n "请输入对应数字>"
     read -r option
     case $option in
@@ -13,6 +14,9 @@ init(){
         ;;
         2)
             bash $Linuxinit/proxy/network-testing.sh
+        ;;
+        3)
+            bash $Linuxinit/proxy/ShellClash.sh
         ;;
         *) echo default
         ;;
