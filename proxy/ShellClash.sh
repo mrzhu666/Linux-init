@@ -1,5 +1,7 @@
 #!/bin/bash
+# 采取非root
 
+# 创建ShellClash软件默认目录
 if [ ! -f ~/.local/share ]
 then
     mkdir -p ~/.local/share

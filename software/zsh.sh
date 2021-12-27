@@ -11,9 +11,11 @@ sudo apt install zsh -y
 
 chsh -s /usr/bin/zsh
 
-
+# 根据历史命令，提示补全
 git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
+# 检测命令语法
 git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
+# 主题
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh/powerlevel10k
 
 # vim ~/.zshrc
