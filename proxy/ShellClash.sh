@@ -11,3 +11,7 @@ export url='https://cdn.jsdelivr.net/gh/juewuy/ShellClash@master' && wget -q --n
 
 # 非root用户安装，需读取环境变量
 source ~/.bashrc &> /dev/null
+
+echo "
+提醒：设置定时更新任务
+"
