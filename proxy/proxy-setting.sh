@@ -10,16 +10,33 @@ server="127.0.0.1"
 port="7890"
 
 
-# git代理
-git config --global http.proxy "socks5://$server:$port" && git config --global https.proxy "socks5://$server:$port"
+init(){
+    git_proxy
+    proxychains_proxy
+    npm_proxy
+}
 
-# proxychains
-echo "
-# find /usr/lib/ -name libproxychains.so.3 -print命令输出路径，再将/usr/bin/proxychains下的export LD_PRELOAD=libproxychains.so.3改为export LD_PRELOAD=刚刚获得的路径
-"
-sudo python3 $Linuxinit/script-python/proxychains.py -server $server -port $port
 
-# npm代理
-npm config set proxy "http://$server:$port"
-npm config set https-proxy "http://$server:$port"
 
+
+git_proxy(){
+    # git代理
+    git config --global http.proxy "socks5://$server:$port" && git config --global https.proxy "socks5://$server:$port"
+}
+
+
+proxychains_proxy(){
+    # proxychains
+    echo "
+    # find /usr/lib/ -name libproxychains.so.3 -print命令输出路径，再将/usr/bin/proxychains下的export LD_PRELOAD=libproxychains.so.3改为export LD_PRELOAD=刚刚获得的路径
+    "
+    sudo python3 $Linuxinit/script-python/proxychains.py -server $server -port $port
+}
+
+npm_proxy(){
+    # npm代理
+    npm config set proxy "http://$server:$port"
+    npm config set https-proxy "http://$server:$port"
+}
+
+init

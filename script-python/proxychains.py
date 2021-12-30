@@ -1,5 +1,6 @@
 import argparse
 
+# https://vra.github.io/2017/12/02/argparse-usage/
 parser = argparse.ArgumentParser()
 parser.add_argument('-server',type=str,required=True,default='127.0.0.1')
 parser.add_argument('-port',type=str,required=True,default='7890')
