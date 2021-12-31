@@ -4,6 +4,8 @@
 
 echo "先启动对应环境再安装，conda activate env"
 
+# 为什么不用source activate
+
 conda install numpy -y
 conda install pandas -y
 conda install jupyter -y
