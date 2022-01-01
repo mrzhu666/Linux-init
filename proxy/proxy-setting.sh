@@ -11,9 +11,32 @@ port="7890"
 
 
 init(){
-    git_proxy
-    proxychains_proxy
-    npm_proxy
+    echo "-------------------------------------------------------------"
+    echo "代理设置"
+    echo "1.全部设置"
+    echo "2.git"
+    echo "3.proxychains"
+    echo "4.npm"
+    echo -n "请输入对应数字>"
+    read -r option
+    case $option in
+        1) 
+            git_proxy
+            proxychains_proxy
+            npm_proxy
+        ;;
+        2)
+            git_proxy
+        ;;
+        3)
+            proxychains_proxy
+        ;;
+        4)
+            npm_proxy
+        ;;
+        *) echo default
+        ;;
+    esac
 }
 
 
