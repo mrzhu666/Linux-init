@@ -18,18 +18,25 @@ init()
     esac
 }
 
-
+# 导出环境
 exportEnv(){
-    source activate  # 激活基础环境，脚本文件是隔离运行的
+    # conda init bash
+    # source activate  # 激活基础环境，脚本文件是隔离运行的
     conda activate "$env"
     conda env export > "$Linuxinit/out/$env".yaml
     pip freeze > "$Linuxinit/out/$env".txt
+
+    echo ""
+    echo "local usage:"
+    echo "conda env create -f $env.yaml -n $env"
+    echo "conda activate $env".
+    echo "pip install -r $env.txt"
 }
 
-
+# 导入环境
 importEnv(){
     source activate
-    # conda env create -f "./out/$env".yaml -n "$env"
+    conda env create -f "./out/$env".yaml -n "$env"
     conda activate "$env"
     pip install -r "$Linuxinit/out/$env".txt
 }

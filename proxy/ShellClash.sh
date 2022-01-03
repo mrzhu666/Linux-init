@@ -14,4 +14,5 @@ source ~/.bashrc &> /dev/null
 
 echo "
 提醒：设置定时更新任务
+输入source ~/.profile
 "

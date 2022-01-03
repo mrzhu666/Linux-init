@@ -17,10 +17,12 @@ def proxychains_conf(server,port):
     with open(file, "r", encoding="utf-8") as f:
         for line in f.readlines():
             line_split=line.split(' ')
-            if(line[0]!='#'     and line_split[0]=='socks5'):
+            if(line_split[0]!='#' and line_split[0]=='socks5'):
                 line_split[1]=server
                 line_split[2]=port+'\n'
                 flag=True
+            if(line_split[0]=='socks4' and line_split[1]=='127.0.0.1' and line_split[2]=='9050'):  # 去掉默认的设置
+                continue
             file_data+=' '.join(line_split)
         if(not flag):
             file_data+='socks5 '+server+' '+port
