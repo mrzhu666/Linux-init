@@ -8,7 +8,7 @@ init(){
     echo "3.zsh"
     echo -n "请输入对应数字>"
     read -r option
-    case $option in
+    case $option in 
         1) 
             bash $Linuxinit/software/ssh.sh
         ;;

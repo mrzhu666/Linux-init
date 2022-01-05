@@ -18,12 +18,12 @@ git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-sy
 # 主题
 git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh/powerlevel10k
 
+sudo python3 $Linuxinit/script-python/zsh.py
+sudo chmod 777 ~/.zshrc  # 修改文件权限
 # vim ~/.zshrc
 # source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 # source ~/.zsh/powerlevel10k/powerlevel10k.zsh-theme
-
-# 原terminus改名为tabby
 
 # 配置 linuxinit
 # 变量都放这个文件不放bashrc

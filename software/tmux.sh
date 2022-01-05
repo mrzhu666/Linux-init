@@ -35,13 +35,13 @@ conf(){
     cp .tmux/.tmux.conf.local .
 }
 
+echo "
+\`设为prefix
+vim ~/.tmux.conf
+    set -g prefix2 \`                        
+    bind \` send-prefix -2
 
-# # `设为prefix
-# vim ~/.tmux.conf
-#     set -g prefix2 `                        # GNU-Screen compatible prefix
-#     bind ` send-prefix -2
-
-# tmux kill-server  # 关闭
-# tmux              # 开启
+tmux kill-server 或者               
+"
 
 tmux

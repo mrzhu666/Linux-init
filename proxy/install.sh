@@ -1,5 +1,6 @@
 #!/bin/bash
-# 采取非root
+# 代理相关软件安装
+# ShellClash采取非root
 
 # 创建ShellClash软件默认目录
 if [ ! -f ~/.local/share ]
@@ -14,5 +15,8 @@ source ~/.bashrc &> /dev/null
 
 echo "
 提醒：设置定时更新任务
-输入source ~/.profile
+输入source ~/.profile或重连shell
 "
+
+echo "安装proxychains"
+sudo apt install proxychains -y

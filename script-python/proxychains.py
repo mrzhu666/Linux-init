@@ -21,7 +21,8 @@ def proxychains_conf(server,port):
                 line_split[1]=server
                 line_split[2]=port+'\n'
                 flag=True
-            if(line_split[0]=='socks4' and line_split[1]=='127.0.0.1' and line_split[2]=='9050'):  # 去掉默认的设置
+            if(line_split[0]=='socks4'):  # 去掉默认的设置
+                print(line_split)
                 continue
             file_data+=' '.join(line_split)
         if(not flag):

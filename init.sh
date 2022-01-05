@@ -13,6 +13,7 @@ init(){
 	echo "3.初始化系统"
     echo "4.框架环境管理"
     echo "5.常用软件管理"
+    echo "6.常用脚本"
 	
     echo -n "请输入对应数字>"
     read -r option

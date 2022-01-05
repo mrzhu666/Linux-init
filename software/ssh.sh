@@ -3,6 +3,12 @@
 # 文件命名规则 客户端-服务端
 # 复制/.ssh下的密钥到客户端
 
+
+sudo apt update
+sudo apt install openssh-server
+sudo ps -e |grep ssh
+sudo service ssh start
+
 echo "建议文件命名规则：客户端-服务端"
 echo -n '输入存储的文件名(id_rsa)>'
 read -r ssh_file

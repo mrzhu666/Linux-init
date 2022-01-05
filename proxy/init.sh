@@ -17,7 +17,7 @@ init(){
             bash $Linuxinit/proxy/network-testing.sh
         ;;
         3)
-            bash $Linuxinit/proxy/ShellClash.sh
+            bash $Linuxinit/proxy/install.sh
         ;;
         4)
             bash $Linuxinit/proxy/proxy-setting.sh
