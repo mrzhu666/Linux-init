@@ -20,6 +20,7 @@ git clone --depth=1 https://github.com/romkatv/powerlevel10k.git ~/.zsh/powerlev
 
 sudo python3 $Linuxinit/script-python/zsh.py
 sudo chmod 777 ~/.zshrc  # 修改文件权限
+
 # vim ~/.zshrc
 # source ~/.zsh/zsh-autosuggestions/zsh-autosuggestions.zsh
 # source ~/.zsh/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
