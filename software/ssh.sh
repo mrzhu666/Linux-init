@@ -22,6 +22,6 @@ echo "保存路径 :$ssh_path"
 
 echo "生成密钥对"
 ssh-keygen -t rsa -f $ssh_path
-echo "添加公钥到authorized_keys"
+echo "已添加公钥到authorized_keys"
 cat "$ssh_path.pub" >> "$HOME/.ssh/authorized_keys" 
-
+echo "在~/.ssh文件夹下复制密钥"

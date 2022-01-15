@@ -12,8 +12,8 @@ proxychains conda install jupyter -y
 proxychains conda install scipy -y
 proxychains conda install h5py -y
 proxychains conda install tqdm -y
-proxychains conda install matplotlib -y  # 绘图
-proxychains conda install seaborn -y  # 绘图
+proxychains conda install matplotlib -y  
+proxychains conda install seaborn -y  
 proxychains conda install scikit-learn -y  # 清华源，关vpn下载
 proxychains conda install pyyaml -y
 

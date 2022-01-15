@@ -25,9 +25,9 @@ uninstall(){
     # npm node 卸载旧版
     # 需要升级版本时直接卸了再重装
     # apt卸载
-    sudo apt remove --purge npm
-    sudo apt remove --purge nodejs
-    sudo apt remove --purge nodejs-legacy
+    sudo apt remove --purge npm -y
+    sudo apt remove --purge nodejs -y
+    sudo apt remove --purge nodejs-legacy -y
     sudo apt autoremove
 
     #手动删除 
@@ -41,17 +41,34 @@ uninstall(){
 
 install(){
     # 新版本安装 https://github.com/nodesource/distributions/blob/master/README.md
+    
+    echo "-------------------------------------------------------------"
+    echo "选择Node版本"
+    echo "1.Node.js v14.x"
+    echo "2.Node.js v17.x"
+    echo -n "请输入对应数字>"
+    read -r option
     cd "$HOME" || return
+    case $option in
+        1) 
+            # Node.js v14.x:
+            # node -v 14.18.2
+            # npm -v 6.14.15
+            curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
+            sudo apt-get install -y nodejs
+        ;;
+        2)
+            # Node.js v17.x:
+            curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
+            sudo apt-get install -y nodejs
+        ;;
+        *) echo default
+        ;;
+    esac
+    
 
-    # Node.js v14.x:
-    # node -v 14.18.2
-    # npm -v 6.14.15
-    # curl -fsSL https://deb.nodesource.com/setup_14.x | sudo -E bash -
-    # sudo apt-get install -y nodejs
 
-    # Node.js v17.x:
-    curl -fsSL https://deb.nodesource.com/setup_17.x | sudo -E bash -
-    sudo apt-get install -y nodejs
+
 }
 
 
