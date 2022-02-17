@@ -9,6 +9,10 @@
 server="127.0.0.1"
 port="7890"
 
+Acquire::http::proxy "http://127.0.0.1:7890/";
+Acquire::https::proxy "https://127.0.0.1:7890/";
+Acquire::ftp::proxy "ftp://127.0.0.1:7890/";
+Acquire::socks::proxy "socks://127.0.0.1:7890/";
 
 init(){
     echo "-------------------------------------------------------------"
