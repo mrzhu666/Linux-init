@@ -1,3 +1,5 @@
+# 该脚本用于设置proxychains
+
 import os
 import argparse
 
@@ -32,6 +34,9 @@ def proxychains_conf(server,port):
         f.write(file_data)
 
 def proxychains_lib():
+    # find /usr/lib/ -name libproxychains.so.3 -print命令输出路径，
+    # 再将/usr/bin/proxychains下的export LD_PRELOAD=libproxychains.so.3改为export LD_PRELOAD=刚刚获得的路径
+
     file='/usr/bin/proxychains'
     file_data = ""
     result=os.popen('find /usr/lib/ -name libproxychains.so.3 -print')

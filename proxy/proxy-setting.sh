@@ -17,10 +17,10 @@ Acquire::socks::proxy "socks://127.0.0.1:7890/";
 init(){
     echo "-------------------------------------------------------------"
     echo "代理设置"
-    echo "1.全部设置"
-    echo "2.git"
-    echo "3.proxychains"
-    echo "4.npm"
+    echo "1.以下全部设置"
+    echo "2.git设置代理"
+    echo "3.proxychains设置"
+    echo "4.npm设置代理"
     echo -n "请输入对应数字>"
     read -r option
     case $option in

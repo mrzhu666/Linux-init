@@ -7,6 +7,7 @@
 init(){
     echo "-------------------------------------------------------------"
     echo "系统初始化"
+    echo "  安装常用的软件"
     echo "1.ubuntu-18.04.6-live-server-amd64"
     echo -n "请输入对应数字>"
     read -r option
