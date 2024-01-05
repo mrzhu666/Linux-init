@@ -26,3 +26,4 @@ linuxinit
 
 - 直接修改文件配置
 - git存储配置，软链接指向配置文件
+- dockerfile，在容器中测试脚本
